@@ -1,5 +1,5 @@
-import * as BABYLON from '@babylonjs/core';
-import '@babylonjs/loaders'
+import * as BABYLON from './@babylonjs/core';
+import './@babylonjs/loaders'
 
 const canvas = document.getElementById('renderCanvas');
 
