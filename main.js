@@ -39,7 +39,7 @@ var createScene = function () {
   // Ground
   var ground = BABYLON.MeshBuilder.CreateGround("ground", { height: 500, width: 500, subdivisions: 4 }, scene);
   var groundMaterial = new BABYLON.StandardMaterial("groundMaterial", scene);
-  groundMaterial.diffuseTexture = new BABYLON.Texture("public/wood.jpg", scene);
+  groundMaterial.diffuseTexture = new BABYLON.Texture("/wood.jpg", scene);
   groundMaterial.diffuseTexture.uScale = 300;
   groundMaterial.diffuseTexture.vScale = 300;
   groundMaterial.specularColor = new BABYLON.Color3(.1, .1, .1);
@@ -49,7 +49,7 @@ var createScene = function () {
 
 
   // Load hero character and play animation
-  var car = BABYLON.SceneLoader.ImportMesh("", "/public/", 'Car.glb', scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
+  var car = BABYLON.SceneLoader.ImportMesh("", "/", 'Car.glb', scene, function (newMeshes, particleSystems, skeletons, animationGroups) {
       var hero = scene.getMeshByName("CarBody_primitive0").parent.parent;
       var backRight = scene.getMeshByName("BackRightWheel_primitive0").parent; 
       var backLeft = scene.getMeshByName("BackLeftWheel_primitive0").parent; 
